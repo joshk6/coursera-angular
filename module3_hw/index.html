@@ -25,8 +25,8 @@
     <div class="container">
       <!-- found-items should be implemented as a component -->
       <found-items ng-if="nid.found.length > 0" items="nid.found" on-remove="nid.remove(index)"></found-items>
-      <div ng-if="nid.found.length==0">Nothing in the list</div>
-      
+      <div ng-if='nid.listEmpty'>Nothing found</div>
+
     </div>
  </div>
 

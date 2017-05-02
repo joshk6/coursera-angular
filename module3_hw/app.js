@@ -29,16 +29,27 @@
     function NarrowItDownController(MenuSearchService) {
       var narrowIt = this;
       var myService = MenuSearchService;
-
+      narrowIt.listEmpty = false;
       narrowIt.found = [];
       narrowIt.searchTerm = "";
       narrowIt.errMessage = "";
 
       narrowIt.check = function() {
+        if (narrowIt.searchTerm=='') {
+          narrowIt.listEmpty=true;
+          return;
+        }
+        narrowIt.searchTerm=narrowIt.searchTerm.toLowerCase();
+        
         var promise = MenuSearchService.getMatchedMenuItems(narrowIt.searchTerm).promise;
         promise.then(function(response) {
             console.log("Success: " + response.length + " items retrieved"); //reponse data
             narrowIt.found=response;
+            if (narrowIt.found.length==0) {
+              narrowIt.found.listEmpty=true;
+            } else {
+              narrowIt.listEmpty=false;
+            }
           })
           .catch(function(error) {
             console.log(error);
@@ -48,6 +59,10 @@
 
       narrowIt.remove = function(index) {
         narrowIt.found.splice(index, 1);
+        if (narrowIt.found.length==0) {
+          narrowIt.listEmpty=true;
+
+        }
       }
     }
 
