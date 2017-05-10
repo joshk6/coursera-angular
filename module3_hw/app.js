@@ -73,6 +73,7 @@
       var menuItems; //maintains list retrieved from server so
                      //menu is fetched only once.
 
+        
       service.getMatchedMenuItems = function(searchTerm) {
         var deferred = $q.defer();
         if (menuItems == null) {
