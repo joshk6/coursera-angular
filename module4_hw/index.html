@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>MenuApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/bootstrap.min.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Italianno" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body ng-app="MenuApp">
+<!-- <body ng-app="MenuApp"  class='img' style="background-image: url('images/restaurant.jpg')" > -->
+  <img class="bgImg" src='images/restaurant.jpg'/>
+<div class="fg">
+  <ui-view></ui-view>
+</div>
+
+  <!-- Libraries -->
+ <script src="lib/angular.min.js"></script>
+ <script src="lib/angular-ui-router.min.js"></script>
+
+ <!-- Modules -->
+ <script src="src/datathing.module.js"></script>
+ <script src="src/menuapp.module.js"></script>
+
+ <!-- Routes -->
+ <!-- <script src="src/routes.js"></script> -->
+
+ <!-- 'ShoppingList' module artifacts -->
+<script src="src/datathing.MenuDataService.js"></script>
+<script src="src/MenuApp.MainController.js"></script>
+<script src="src/MenuApp.CategoriesController.js"></script>
+<script src="src/MenuApp.ItemDetailController.js"></script>
+<script src="src/MenuApp.CatListComponent.js"></script>
+<script src="src/MenuApp.ItemListComponent.js"></script>
+<script src="routes.js"></script>
+</body>
+
+</html>

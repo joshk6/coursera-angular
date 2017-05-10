@@ -1,0 +1,11 @@
+
+
+  <div ng-repeat='myitem in $ctrl.items' class="detailText">
+    <span>{{myitem.name}}</span>
+    <span>{{myitem.description}}  </span>
+    <span><span ng-if='myitem.price_small'>Large: </span>{{myitem.price_large | currency }}  </span>
+    <span><span ng-if='myitem.price_small'>Small: </span>{{myitem.price_small | currency }}  </span>
+    <div class="hline"></div>
+    <!-- <span ng-if="{myitem.price_large}">{{myitem.price_large}} for large portion</span>
+    <span ng-if="{myitem.price_large}">{{myitem.price_large}} for small portion</span> -->
+</div>
