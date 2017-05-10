@@ -26,7 +26,7 @@
       })
       .state('main.categories.itemDetail', {
         url: '/itemDetail/{short_name}',
-        templateUrl: '/item_detail.html',
+        templateUrl: 'item_detail.html',
         controller: 'ItemDetailController as idet',
         resolve: {
           items: ['$stateParams', 'MenuDataService',
