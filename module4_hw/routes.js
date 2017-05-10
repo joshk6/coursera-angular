@@ -13,7 +13,7 @@
       })
       .state('main.categories', {
         url: 'main/categories',
-        templateUrl: '/categories.html',
+        templateUrl: 'categories.html',
         controller: 'CategoriesController as cats',
         resolve: {
 
